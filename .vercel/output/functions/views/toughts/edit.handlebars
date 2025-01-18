@@ -1,0 +1,12 @@
+<div class="tought-form-container">
+    <a href="/toughts/dashboard">Voltar</a>
+    <h1>Editar tarefa</h1>
+    <form action="/toughts/edit" method="POST">
+    <input type="hidden" name="id" value="{{tought.id}}">
+        <div class="form-control">
+            <label for="title">Tarefa:</label>
+            <input type="text" name="title" placeholder="digite sua tarefa" value="{{tought.title}}">
+        </div>
+        <input type="submit" value="Editar Tarefa">
+    </form>
+</div>
