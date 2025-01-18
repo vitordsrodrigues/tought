@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon ./index.js localhost 3000",
-    "vercel-build":"npx prisma migrate deploy"
+    "vercel-build":"node vercel-build.js"
   },
   "keywords": [],
   "author": "",
