@@ -1,7 +1,7 @@
 const { Sequelize } = require('sequelize')
 const pg = require('pg')
 
-const sequelize = new Sequelize(process.env.DATABASE_URL || 'postgresql://neondb_owner:JzODHj1ER5Fk@ep-icy-river-a5lxt6xx.us-east-2.aws.neon.tech/neondb?sslmode=require', {
+const sequelize = new Sequelize(process.env.DATABASE_URL || 'postgresql://neondb_owner:lZ9fPV2oumAQ@ep-twilight-sun-a8t237yx.eastus2.azure.neon.tech/neondb?sslmode=require', {
     dialect: 'postgres',
     dialectModule: pg,
     dialectOptions: {
