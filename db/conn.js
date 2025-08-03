@@ -1,23 +1,14 @@
 const { Sequelize } = require('sequelize')
-const pg = require('pg')
 
-const sequelize = new Sequelize(process.env.DATABASE_URL || 'postgresql://neondb_owner:lZ9fPV2oumAQ@ep-twilight-sun-a8t237yx.eastus2.azure.neon.tech/neondb?sslmode=require', {
-    dialect: 'postgres',
-    dialectModule: pg,
-    dialectOptions: {
-        ssl: {
-            require: true,
-            rejectUnauthorized: false
-        }
-    },
-    logging: false
+const sequelize = new Sequelize('toughts', 'root', '', {
+    host: 'localhost',
+    dialect: 'mysql',
 })
-
 try {
     sequelize.authenticate()
-    console.log('Conectado ao PostgreSQL!')
+    console.log('Conectado com sucesso.')
 } catch (error) {
-    console.log(`Erro ao conectar: ${error}`)
+    console.log(`Não foi possível conectar: ${err}`) 
 }
 
 module.exports = sequelize
